@@ -1,4 +1,7 @@
 package Base;
+
+import java.util.Scanner;
+
 /*
 UCF COP3330 Summer 2021 Assignment 1 Solution
 Copyright 2021 Alek Dussuau
@@ -25,6 +28,35 @@ Exercise 22 - Comparing Numbers
 */
 public class App {
     public static void main(String[] args){
-        
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first number? ");
+        String b_first = input.nextLine();
+        System.out.print("Enter the second number? ");
+        String b_second = input.nextLine();
+        System.out.print("Enter the third number? ");
+        String b_third = input.nextLine();
+
+        int num = 0;
+        int a = Integer.parseInt(b_first);
+        int b = Integer.parseInt(b_second);
+        int c = Integer.parseInt(b_third);
+
+        if(a > b){
+            if(a > c){
+                num = a;
+            }else{
+                num = c;
+            }
+        }else{
+            if(b > c){
+                num = b;
+            }else{
+                num = c;
+            }
+        }
+
+        System.out.print("The largest number is "+num);
+
     }
 }
